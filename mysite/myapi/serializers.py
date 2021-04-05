@@ -5,9 +5,14 @@
 '''
 
 from rest_framework import serializers
-from .models import Hero
+from .models import Hero, Spell
 
 class HeroSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Hero
         fields = ('id', 'name', 'alias')
+
+class SpellSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Spell
+        fields = ('id', 'name', 'description')

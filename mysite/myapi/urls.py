@@ -7,6 +7,7 @@ from . import views
 # If we add or delete items from the database, the URLs will update to match.
 router = routers.DefaultRouter()
 router.register(r'heroes', views.HeroViewSet)
+router.register(r'spells', views.SpellViewSet)
 
 # Wire up the API using automatic URL routing.
 # Additionally, include login URLs for the browsable API

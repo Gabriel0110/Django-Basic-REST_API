@@ -7,3 +7,10 @@ class Hero(models.Model):
 
     def __str__(self):
         return self.name
+
+class Spell(models.Model):
+    name = models.CharField(max_length=60)
+    description = models.TextField()
+
+    def __str__(self):
+        return self.name
